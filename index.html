@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimulaCon</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="Container">
+            <h1 class="title">SimulaCon</h1>
+
+            <div class="input">
+                <label for="parcela">PARCELA</label>
+                <input type="number" id="parcela" min="1">
+            </div>
+
+            <div class="input">
+                <label for="prazo">PRAZO</label>
+                <input type="number" id="prazo" min="1">
+            </div>
+
+            <div class="input">
+                <label for="lanceLivre">LANCE LIVRE</label>
+                <input type="number" id="lanceLivre" min="0">
+            </div>
+
+            <div class="input">
+                <label for="lanceCarta">LANCE DA CARTA</label>
+                <input type="number" id="lanceCarta" min="0">
+            </div>
+
+            <button id='calcular'>CALCULAR</button>
+            <button id="limpar">LIMPAR</button>
+
+            <div class="result" id="resultado"></div>
+            <button id="copiar">COPIAR PROPOSTA</button>
+        </div>
+    </main>
+
+    <script src="./index.js" defer></script>
+</body>
+
+</html>
