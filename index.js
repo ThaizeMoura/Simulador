@@ -3,6 +3,7 @@ const copiar = document.getElementById('copiar');
 const limpar = document.getElementById('limpar');
 
 function simular() {
+    const carta = parseFloat(document.getElementById('carta').value);
     const parcela = parseFloat(document.getElementById('parcela').value);
     const prazo = parseFloat(document.getElementById('prazo').value);
     const lanceLivre = parseFloat(document.getElementById('lanceLivre').value);
@@ -10,7 +11,7 @@ function simular() {
     const resultado = document.getElementById('resultado');
 
     // Verificar se os campos estão preenchidos corretamente
-    if (isNaN(parcela) || isNaN(prazo) || isNaN(lanceLivre) || isNaN(lanceCarta)) {
+    if (isNaN(carta) ||isNaN(parcela) || isNaN(prazo) || isNaN(lanceLivre) || isNaN(lanceCarta)) {
         resultado.innerText = "Por favor, preencha todos os campos corretamente!!!";
         return;
     }
@@ -21,12 +22,12 @@ function simular() {
     const valorParcela = valorSimulador / parcela;
 
     resultado.innerHTML = `
-    <p><strong>Proposta de Simulação</strong></p>
-        <p><strong>Valor total a pagar:</strong> R$ ${valorSimulador.toFixed(2)}</p>
-        <p><strong>Entrada:</strong> R$ ${lanceLivre.toFixed(2)}</p>
-        <p><strong>Lance da Carta:</strong> R$ ${lanceCarta.toFixed(2)}</p>
-        <p><strong>Valor de cada parcela:</strong> R$ ${valorParcelas.toFixed(2)}</p>
-        <p><strong>Parcelas restantes:</strong> ${valorParcela.toFixed(0)}</p>
+    <p><strong>Proposta</strong></p>
+    <p><strong>VALOR DA CARTA:</STRONG> R$ ${carta.toFixed(2)}</p>
+        <p><strong>LANCE CLIENTE:</strong> R$ ${lanceLivre.toFixed(2)}</p>
+        <p><strong>LANCE DA CARTA:</strong> R$ ${lanceCarta.toFixed(2)}</p>
+        <p><strong>PARCELA PÓS LANCE:</strong> R$ ${valorParcelas.toFixed(2)} em 79x</p>
+        <p><strong>PRAZO PÓS LANCE:</strong> ${valorParcela.toFixed(0)} x ${parcela.toFixed(2)}</p>
     `;
 }
 
@@ -45,6 +46,7 @@ function copiarProposta() {
 
 // Função para limpar os campos
 function limparCampos() {
+    document.getElementById('carta').value = "";
     document.getElementById('parcela').value = "";
     document.getElementById('prazo').value = "";
     document.getElementById('lanceLivre').value = "";
