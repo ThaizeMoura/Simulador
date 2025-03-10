@@ -24,6 +24,7 @@ function simular() {
     resultado.innerHTML = `
     <p><strong>Proposta</strong></p>
     <p><strong>VALOR DA CARTA:</STRONG> R$ ${carta.toFixed(2)}</p>
+    <p><strong>VALOR DA PARCELA:</strong> R$ ${parcela.toFixed(2)}</p>
         <p><strong>LANCE CLIENTE:</strong> R$ ${lanceLivre.toFixed(2)}</p>
         <p><strong>LANCE DA CARTA:</strong> R$ ${lanceCarta.toFixed(2)}</p>
         <p><strong>PARCELA PÓS LANCE:</strong> R$ ${valorParcelas.toFixed(2)} em 79x</p>
