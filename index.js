@@ -22,13 +22,11 @@ function simular() {
     const valorParcela = valorSimulador / parcela;
 
     resultado.innerHTML = `
-    <p><strong>Proposta</strong></p>
-    <p><strong>VALOR DA CARTA:</STRONG> R$ ${carta.toFixed(2)}</p>
-    <p><strong>VALOR DA PARCELA:</strong> R$ ${parcela.toFixed(2)}</p>
-        <p><strong>LANCE CLIENTE:</strong> R$ ${lanceLivre.toFixed(2)}</p>
-        <p><strong>LANCE DA CARTA:</strong> R$ ${lanceCarta.toFixed(2)}</p>
-        <p><strong>PARCELA PÓS LANCE:</strong> R$ ${valorParcelas.toFixed(2)} em 79x</p>
-        <p><strong>PRAZO PÓS LANCE:</strong> ${valorParcela.toFixed(0)} x ${parcela.toFixed(2)}</p>
+    <p><strong>*Proposta com Lance*</strong></p>
+    <p><strong>*VALOR DA CARTA*</STRONG> R$ ${carta.toFixed(2)}</p>
+        <p><strong>*LANCE CLIENTE:*</strong> R$ ${lanceLivre.toFixed(2)}</p>
+        <p><strong>*LANCE DA CARTA:*</strong> R$ ${lanceCarta.toFixed(2)}</p>
+        <p><strong>*PÓS LANCE*:</strong> R$ ${valorParcelas.toFixed(2)} em 79x *OU* ${valorParcela.toFixed(0)} x ${parcela.toFixed(2)}</p>
     `;
 }
 
@@ -59,3 +57,4 @@ function limparCampos() {
 calcular.addEventListener("click", simular);
 copiar.addEventListener("click", copiarProposta);
 limpar.addEventListener("click", limparCampos);
+
